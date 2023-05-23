@@ -1,0 +1,108 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+html,body{
+    display: grid;
+    height: 100%;
+    place-items: center;
+    text-align: center;
+    background-color: black;
+}
+.container{
+    position: relative;
+    width: 400px;
+    background-color: grey;
+    padding: 20px 30px;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.container .text{
+    font-size: 25px;
+    color: #434141;
+    font-weight: 500;
+}
+.container .edit{
+    color: rgb(249, 249, 249);
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
+.container .star-widget input{
+display: none;
+}
+.star-widget label{
+    font-size: 40px;
+    color: rgb(248, 244, 244);
+    padding: 10px;
+    float: right;
+}
+/* .star-widget input:not(:checked) ~ label:hover,
+.star-widget input:not(:checked) ~ label:hover~label{
+ color: yellow;   
+} */
+.star-widget input:checked ~ label{
+    color:rgb(187, 255, 0);
+}
+#rate-1:checked ~ form header:before{
+content: "i don't like it";
+}
+#rate-2:checked ~ form header:before{
+content: "Not Bad";
+}
+#rate-3:checked ~ form header:before{
+content: "It's okay";
+}
+#rate-4:checked ~ form header:before{
+content: "I Like It";
+}
+#rate-5:checked ~ form header:before{
+content: "I Love It";
+}
+.container form{
+    display: none;
+}
+input:checked~form{
+    display: block;
+}
+.container .post{
+    display: none;
+}
+form header{
+    width: 100%;
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+    transition: all .2s ease-in-out;
+}
+form .textarea{
+    height: 100px;
+    width: 100%;
+    overflow: hidden;
+}
+form .textarea textarea{
+    height: 100%;
+    width: 100%;
+    padding: 10PX;
+    /* border: 1px solid yellowgreen; */
+    background-color: rgb(71, 70, 70);
+    font-size: 17px;
+}
+.btn{
+    height: 45px;
+    width: 100%;
+    margin: 15px 0px;
+}
+button{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(185, 185, 185);
+    font-size: large;
+}
+button:hover{
+    background-color:rgb(198, 122, 122) ;
+}
